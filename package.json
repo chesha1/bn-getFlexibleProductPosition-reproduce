@@ -20,9 +20,9 @@
 		"wrangler": "^4.18.0"
 	},
 	"dependencies": {
-		"@binance/simple-earn": "^4.0.0",
-		"@binance/spot": "^6.0.0",
-		"@binance/wallet": "^5.0.0",
+		"@binance/simple-earn": "^5.0.2",
+		"@binance/spot": "^7.0.0",
+		"@binance/wallet": "^5.0.2",
 		"decimal.js": "^10.5.0"
 	}
 }

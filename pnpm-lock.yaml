@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@binance/simple-earn':
-        specifier: ^4.0.0
-        version: 4.0.0
+        specifier: ^5.0.2
+        version: 5.0.2
       '@binance/spot':
-        specifier: ^6.0.0
-        version: 6.0.1
+        specifier: ^7.0.0
+        version: 7.0.0
       '@binance/wallet':
-        specifier: ^5.0.0
-        version: 5.0.1
+        specifier: ^5.0.2
+        version: 5.0.2
       decimal.js:
         specifier: ^10.5.0
         version: 10.5.0
@@ -48,20 +48,17 @@ importers:
 
 packages:
 
-  '@binance/common@1.0.2':
-    resolution: {integrity: sha512-xRh7b5PXWJcVLOwV8bz+GsGXHmayFhI63WNoDhgOOX/4VaIZu0yiTO2l92BxfxgCyP8HDnK/GsnheOoGSIc/Dw==}
+  '@binance/common@1.1.0':
+    resolution: {integrity: sha512-+kAPMKtE50GfxE7kAwjT4YHaCFwP/Bkzwo1ujlhvK8jDu9j7TFeZvW10/xhCXyQ+7juSwSL8xqpn7QtpuZfmbQ==}
 
-  '@binance/common@1.0.6':
-    resolution: {integrity: sha512-qMZaQFi+TsktjvdvPejOVRKxSTP9UiZ66oDJ8zfpC9gs0Vaaa4vD+AHKC1OgB0IsiHPstXJ+ZxivuOwoyLyjPw==}
+  '@binance/simple-earn@5.0.2':
+    resolution: {integrity: sha512-KRp9Mn/Q/mTgvFLDkrRxfBgpicV+cTLeTu/rBCy6e8A7SMyjOG1GfnFUELV350MR5Q8VhkHn6PSZa7u+Gszm1w==}
 
-  '@binance/simple-earn@4.0.0':
-    resolution: {integrity: sha512-yTJMJPAIobRizk6iDAL6fvX7bpl7c+i1yPJIFvTmTzSFM8urjHfKLFWeQlVerRGOeT1CiTgxJ3cs4NVEZ436WQ==}
+  '@binance/spot@7.0.0':
+    resolution: {integrity: sha512-J4RC9T3OzY8K2uwiJRHYi8bdfwSn4wvJRkuuO+53PlYR9J0igHU79J1RxDinfk1QM93GQTSEF7BLRrxn+inZIA==}
 
-  '@binance/spot@6.0.1':
-    resolution: {integrity: sha512-YzrlKGH6nNcCYSYrkDsUThh2zYxcCx5ZO2az8HCVRpInI8MaEkOq3cthbP2PP/UVsD16gobEa1Je6D3XsDwL9Q==}
-
-  '@binance/wallet@5.0.1':
-    resolution: {integrity: sha512-tbFGltBpL318IziMvuqHP63LLR/F5SjF/ERMErElfZ4b3K0HJT+Axiq7yf5wEV81Ce8+uJ2EE5uKSWFObz/DQA==}
+  '@binance/wallet@5.0.2':
+    resolution: {integrity: sha512-WVWBv4GlVSt8WqPKqf63ItM8qhlTFPorzjTIEve3XhTar8pKPaw5bvoifmHCGYNws9Yk07CjOX204IstdEDxzw==}
 
   '@cloudflare/kv-asset-handler@0.4.0':
     resolution: {integrity: sha512-+tv3z+SPp+gqTIcImN9o0hqE9xyfQjI1XD9pL6NuKjua9B1y7mNYv0S9cP+QEbA4ppVgGZEmKOvHX5G5Ei1CVA==}
@@ -1150,7 +1147,7 @@ packages:
 
 snapshots:
 
-  '@binance/common@1.0.2':
+  '@binance/common@1.1.0':
     dependencies:
       axios: 1.9.0
       ws: 8.18.2
@@ -1159,8 +1156,18 @@ snapshots:
       - debug
       - utf-8-validate
 
-  '@binance/common@1.0.6':
+  '@binance/simple-earn@5.0.2':
     dependencies:
+      '@binance/common': 1.1.0
+      axios: 1.9.0
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - utf-8-validate
+
+  '@binance/spot@7.0.0':
+    dependencies:
+      '@binance/common': 1.1.0
       axios: 1.9.0
       ws: 8.18.2
     transitivePeerDependencies:
@@ -1168,28 +1175,9 @@ snapshots:
       - debug
       - utf-8-validate
 
-  '@binance/simple-earn@4.0.0':
+  '@binance/wallet@5.0.2':
     dependencies:
-      '@binance/common': 1.0.2
-      axios: 1.9.0
-    transitivePeerDependencies:
-      - bufferutil
-      - debug
-      - utf-8-validate
-
-  '@binance/spot@6.0.1':
-    dependencies:
-      '@binance/common': 1.0.6
-      axios: 1.9.0
-      ws: 8.18.2
-    transitivePeerDependencies:
-      - bufferutil
-      - debug
-      - utf-8-validate
-
-  '@binance/wallet@5.0.1':
-    dependencies:
-      '@binance/common': 1.0.6
+      '@binance/common': 1.1.0
       axios: 1.9.0
     transitivePeerDependencies:
       - bufferutil
