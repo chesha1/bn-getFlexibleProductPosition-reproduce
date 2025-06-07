@@ -18,9 +18,11 @@ export default {
             const response = await simpleEarnClient.restAPI.getFlexibleProductPosition({
                 asset: 'USDT'
             })
-            console.log(response);
+            const data = await response.data();
+            console.log(data);
             return Response.json({
                 "raw_response": response,
+                "data": data,
             });
         } catch (error) {
             console.error(error);
